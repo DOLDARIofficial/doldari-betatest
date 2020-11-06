@@ -5,10 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Rooms from './pages/rooms/Rooms';
 import Main from './pages/main/Main';
 import Books from './pages/books/Books';
-<<<<<<< HEAD
-import Detail from './pages/detail/Detail'
-=======
->>>>>>> dev
 import HealthManagement from './pages/healthMembership/HealthManagement';
 import {makeStyles,  createMuiTheme, ThemeProvider} from '@material-ui/core';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
@@ -62,10 +58,6 @@ function App() {
           <Route exact path="/rooms" component={Rooms}/>
           <Route exact path="/books" component={Books}/>
           <Route exact path="/health_management" component={HealthManagement}/>
-<<<<<<< HEAD
-          <Route exact path="/detail" component={Detail}/>
-=======
->>>>>>> dev
         </Switch>
       
       </BrowserRouter>

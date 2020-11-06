@@ -4,11 +4,10 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import Appbar from '../organisms/Appbar';
-import Navi from '../organisms/Navi';
-import logo_2 from '../logo_2.png';
+import Appbar from '../../organisms/appbar/Appbar';
+
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -104,17 +103,17 @@ export default function _main() {
 
         <Grid item xs={6} sm={2}>
           <Paper className={classes.paper}>
-          <Link to='/rooms'><img src={logo_2}/></Link>
+          <Link to='/rooms'><img src='logo_2.png'/></Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classes.paper}>
-          <Link to='/health'><img src={logo_2}/></Link>
+          <Link to='/health'><img src='logo_2.png'/></Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classes.paper}>
-          <Link to='/books'><img src={logo_2}/></Link>
+          <Link to='/books'><img src='logo_2.png'/></Link>
           </Paper>
         </Grid>
       </Grid>

@@ -2,11 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Skeleton from '@material-ui/lab/Skeleton';
 import Box from '@material-ui/core/Box';
-<<<<<<< HEAD
-import { Button } from '@material-ui/core';
-=======
 import { Button, Typography } from '@material-ui/core';
->>>>>>> dev
 
 interface MainBoardData {
   data: any;
@@ -45,8 +41,4 @@ export default function MainBoard(mainProps: MainBoardData) {
       }
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> dev

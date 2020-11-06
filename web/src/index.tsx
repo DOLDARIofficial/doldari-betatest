@@ -17,8 +17,4 @@ ReactDOM.render(
   </Router>,
 
   document.getElementById('root'),
-<<<<<<< HEAD
 );
-=======
-);
->>>>>>> dev
