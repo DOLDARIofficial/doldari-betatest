@@ -24,8 +24,11 @@ button: {
 }
 
 }));
-
-export default function ButtonAppBar() {
+interface AppbarState{
+  state:  boolean;
+}
+export default function Appbar(data: AppbarState) {
+  const { state } = data;
   const classes = useStyles();
 
   return (
@@ -42,8 +45,8 @@ export default function ButtonAppBar() {
           <Button className={classes.button}>회원가입</Button>
           </div>
         </Toolbar>
-        <Tabbar/>
-      </AppBar>
+        {state && <Tabbar/>}
+      </ AppBar>
     </div>
   );
 }

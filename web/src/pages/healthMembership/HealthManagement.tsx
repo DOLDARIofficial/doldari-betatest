@@ -28,11 +28,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ComplexGrid() {
   const classes = useStyles();
-
+  const [ state, setState] = React.useState(false);
+  
+  function handleState(){
+    setState(true);
+  }
   return (
     
     <div className={classes.root}>
-      <Appbar/>
+      {/*
+         인자가 필요해졌다, Appbar에 props(=인자: state)를 줬기때문에 
+       */}
+      <Appbar state={state}/>
 
       <div style={{width: '70%', margin: '30px auto'}}>
           <Paper className={classes.paper} variant="outlined">

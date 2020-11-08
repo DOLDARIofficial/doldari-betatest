@@ -16,13 +16,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-
-export default function SimplePaper() {
+interface Rooms{
+  state: boolean;
+}
+export default function Rooms(room:  Rooms) {
   const classes = useStyles();
-
+  const {state} = room;
   return (
     <div className={classes.root} style={{width: '70%', margin: '30px auto'}}>
-      <Appbar/> 
+      <Appbar state={state}/> 
       <Paper elevation={0}/>
       <Paper />
       <Paper elevation={3} />

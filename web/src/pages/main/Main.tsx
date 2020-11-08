@@ -5,8 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { Link } from 'react-router-dom';
-
+import Rooms from '../rooms/Rooms';
 import Appbar from '../../organisms/appbar/Appbar';
+import { Button } from '@material-ui/core';
 
 
 
@@ -69,10 +70,16 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function _main() {
   const classes = useStyles();
+ 
+  const [ state, setState] = React.useState(false);
   
+  function handleState(){
+    setState(true);
+  }
+ 
   return(
   <div style={{width: '100%', margin: 0}}>
-    <Appbar/>
+    <Appbar state={false}/>
   <div style={{width:'100%', margin: '50px'}}>
     {/* <Navi/> */}
 
@@ -102,13 +109,14 @@ export default function _main() {
         </Grid>
 
         <Grid item xs={6} sm={2}>
-          <Paper className={classes.paper}>
-          <Link to='/rooms'><img src='logo_2.png'/></Link>
-          </Paper>
+          <Button className={classes.paper} onClick={handleState}>
+          {/* <Link to='/rooms'><img src='logo_2.png'/></Link> */}
+          <Rooms state={state} />
+          </Button>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classes.paper}>
-          <Link to='/health'><img src='logo_2.png'/></Link>
+          <Link to='/health-management'><img src='logo_2.png'/></Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
